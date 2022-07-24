@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-  <title>-- powered by microbot --</title>
+  <title>-- powered locally --</title>
 </svelte:head>
 
 <Header />

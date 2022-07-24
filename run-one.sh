@@ -1,0 +1,1 @@
+uvicorn main:app --port $2 --app-dir ./services/$1 --reload-dir ./services/$1 --reload

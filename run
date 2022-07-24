@@ -1,0 +1,7 @@
+echo '-- launching swarm'
+
+kill -9 $(lsof -t -i tcp:3010)
+kill -9 $(lsof -t -i tcp:3011)
+
+./run-one.sh feed 3010 &
+./run-one.sh inventory 3011 &

@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from starlette.middleware import Middleware
 from starlette.middleware.gzip import GZipMiddleware
 
 from src.router import router

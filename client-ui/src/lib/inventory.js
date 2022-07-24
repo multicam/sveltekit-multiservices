@@ -1,5 +1,10 @@
 const {log} = console
 
+export async function pingService() {
+  const res = await fetch(`${import.meta.env.VITE_INVENTORY_SERVER}/`)
+  return res.json()
+}
+
 export async function fetchProducts() {
   const res = await fetch(`${import.meta.env.VITE_INVENTORY_SERVER}/products`)
   return res.json()

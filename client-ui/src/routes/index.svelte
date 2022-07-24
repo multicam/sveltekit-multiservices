@@ -1,8 +1,8 @@
 <script context="module">
-  import { fetchProducts } from '$lib/inventory.js'
+  import {fetchProducts, pingService} from '$lib/inventory.js'
 
   export async function load() {
-    const products = await fetchProducts()
+    const products = await pingService()
     return { props: { initialProducts: products } }
   }
 </script>
@@ -22,7 +22,7 @@
   $: {
     ;(async () => {
       if ($mutated) {
-        products = await fetchProducts()
+        products = await pingService()
         $mutated = false
       }
     })()
